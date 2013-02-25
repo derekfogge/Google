@@ -1,27 +1,3 @@
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
-
-	Thinkful Project 1: Recreate the Google Home Page
-
-		Let’s get our HTML/CSS skills out of the browser and
-		build our first website. Where better to start than with
-		the Kingpin of the internet—Google. Recreate the Google
-		homepage without looking at the source code. Save the
-		main HTML file as “index.html” —the “.html” file type
-		tells your computer that the file consists of HTML, and
-		we’re calling this page “index” so that the web hosting
-		we’ll be using recognizes it (more on that in a moment).
-		To grab their logo, right click on it and select “Save
-		Image As.” Save the image in the folder you’ve created
-		for this project. It’s a simple page, but this is good
-		practice for implementing a precise vision. Don’t worry
-		about the dropdowns—just focus on a static recreation.
-
-
-
-
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-
-
 * { box-sizing: border-box }
 
 html, body{
