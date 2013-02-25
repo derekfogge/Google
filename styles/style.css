@@ -100,7 +100,7 @@ nav a.active{
 
 .more:after {
 	content : url("../images/more.png");
-	display:block;
+	display:inline;
 	margin-left:2px;
 }
 
