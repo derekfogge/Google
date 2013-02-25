@@ -1,0 +1,282 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+
+	Thinkful Project 1: Recreate the Google Home Page
+
+		Let’s get our HTML/CSS skills out of the browser and
+		build our first website. Where better to start than with
+		the Kingpin of the internet—Google. Recreate the Google
+		homepage without looking at the source code. Save the
+		main HTML file as “index.html” —the “.html” file type
+		tells your computer that the file consists of HTML, and
+		we’re calling this page “index” so that the web hosting
+		we’ll be using recognizes it (more on that in a moment).
+		To grab their logo, right click on it and select “Save
+		Image As.” Save the image in the folder you’ve created
+		for this project. It’s a simple page, but this is good
+		practice for implementing a precise vision. Don’t worry
+		about the dropdowns—just focus on a static recreation.
+
+
+
+
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+
+* { box-sizing: border-box }
+
+html, body{
+	width:100%;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+/* Thinkful Project 1: Recreate the Google Home Page  */
+
+body{
+	background-color:#fff;
+	color: #222;
+	font-size:1em;
+	font-family: Arial, sans-serif;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+
+nav{
+	background-color:#2d2d2d;
+	width:100%;
+	padding:7px;
+	line-height: 1.1em;
+}
+
+nav::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+nav li{
+	display:inline-block;
+}
+
+nav a{
+	color: #bbb;
+	padding: 0 7px 0 9px;
+	font-size: 0.8em;
+	font-weight: bold;
+	text-decoration: none;
+}
+nav a:hover{
+	color:white;
+}
+
+nav a.active{
+	color:white;
+}
+
+.more:after {
+	content : url("../images/more.png");
+	display:block;
+	margin-left:2px;
+}
+
+
+
+.main{
+	background-color:white;
+	width:100%;
+}
+
+.login{
+	float:right;
+	padding:20px;
+
+	font-size:0.8em;
+}
+
+.button{
+	cursor: pointer;
+	border-radius:2px;
+	padding:7px 15px;
+
+background: #f7f7f7;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlY2VjZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  hsl(0,0%,97%) 0%, hsl(0,0%,93%) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsl(0,0%,97%)), color-stop(100%,hsl(0,0%,93%)));
+background: -webkit-linear-gradient(top,  hsl(0,0%,97%) 0%,hsl(0,0%,93%) 100%);
+background: -o-linear-gradient(top,  hsl(0,0%,97%) 0%,hsl(0,0%,93%) 100%);
+background: -ms-linear-gradient(top,  hsl(0,0%,97%) 0%,hsl(0,0%,93%) 100%);
+background: linear-gradient(to bottom,  hsl(0,0%,97%) 0%,hsl(0,0%,93%) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#ececec',GradientType=0 );
+
+	border:1px solid #c6c6c6;
+}
+.button:hover{
+	border:1px solid #aaa;
+}
+
+
+a.button {
+	display: block;
+	color: #666;
+	margin: 20px 15px;
+	text-decoration: none;
+}
+
+
+.search{
+	margin:0 auto;
+	padding-top: 17%;
+	text-align: center;
+	min-width: 360px;
+	max-width: 720px;
+	min-height: 300px;
+}
+
+.logo{
+	padding: 4px;
+}
+
+input[type=text]{
+	font-family:Arial, sans-serif;
+	font-size: 15px;
+	color:#2d2d2d;
+	text-indent: 5px;
+	margin: 20px;
+	min-width: 75%;
+	height:28px;
+	border:1px solid #ddd;
+	margin: 16px;
+	border-radius:1px;
+	border-top:1px solid #aaa;
+	background: url('../images/mic.png') no-repeat right 2px;
+}
+
+input[type=text]:hover{
+	border:1px solid #b8b8b8;
+	border-top: 1px solid #a0a0a0;
+	box-shadow:inset 0 1px 1px #ddd;
+	outline: none;
+}
+
+input[type=text]:focus{
+	border:1px solid #4d90fe;
+	outline: none;
+	box-shadow:inset 0 1px 1px #bbb;
+}
+
+input[type=submit]{
+	display:inline-block;
+	padding: 8px 12px;
+	margin: 0 6px;
+	font-family:Arial, sans-serif;
+	font-size: 11px;
+	color:#444;
+	font-weight: bold;
+}
+
+input[type=submit]:hover{
+	color:#222;
+}
+
+footer{
+	line-height: 1em;
+	height: 40px;
+	position: absolute;
+	bottom:0;
+	right:0;
+	width:100%;
+	padding: 5px 0 25px;
+
+background: #f7f7f7;
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlY2VjZWMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top,  hsl(0,0%,97%) 0%, hsl(0,0%,93%) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,hsl(0,0%,97%)), color-stop(100%,hsl(0,0%,93%)));
+background: -webkit-linear-gradient(top,  hsl(0,0%,97%) 0%,hsl(0,0%,93%) 100%);
+background: -o-linear-gradient(top,  hsl(0,0%,97%) 0%,hsl(0,0%,93%) 100%);
+background: -ms-linear-gradient(top,  hsl(0,0%,97%) 0%,hsl(0,0%,93%) 100%);
+background: linear-gradient(to bottom,  hsl(0,0%,97%) 0%,hsl(0,0%,93%) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#ececec',GradientType=0 );
+
+border-top: 1px solid #ebebeb;
+}
+
+footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer ul{
+	position: absolute;
+	right: 0;
+}
+
+footer li{
+	display:inline-block;
+}
+
+footer a{
+	color:#555;
+	padding:0 8px;
+	font-size:0.785em;
+	text-decoration: none;
+}
+footer a:hover{
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
