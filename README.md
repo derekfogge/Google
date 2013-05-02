@@ -1,4 +1,6 @@
 Google
 ======
 
-Recreating Google homepage for Thinkful
+a recreation of the Google homepage built without viewing source, for Thinkful
+
+http://derekfogge.github.io/Google/
